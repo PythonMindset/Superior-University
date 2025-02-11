@@ -1,9 +1,0 @@
-Recall:
-1. Performance measure
-2. Environment
-3. Acturater
-4. Sensors
-Peas: it is a system to categorize similar systems together.
-
-Sensors(preceive) / Actuaters(act) / Effectors(response)
-
