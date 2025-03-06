@@ -1,4 +1,3 @@
-# Task1 LUHN Program
 def LHUN():
     card=input("Enter the Card Number: ")
     total=0
@@ -16,7 +15,6 @@ def LHUN():
         print("Invalid Card.")
 # LHUN()
 
-# Task2 Sentance
 def puncutations():
     print("This program will be used to remove all the strings from the sentance.")
     input1=input("Enter the sentance: ")
@@ -25,7 +23,7 @@ def puncutations():
         if i in kick:
             input1=input1.replace(i,"")
     print(input1)
-puncutations()
+# puncutations()
 
 def order():
     lines=input("Enter the sentence: ")

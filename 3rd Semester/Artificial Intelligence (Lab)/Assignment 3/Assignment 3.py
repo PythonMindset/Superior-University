@@ -1,34 +1,25 @@
-class SimpleReflexAgent:
-    def __init__(self, desired_temperature):
-        self.desired_temperature = desired_temperature 
+class ModelBasedReflexAgent:
+    def __init__(self,temp):
+        self.desired_temp=temp
         self.previous_action=None
-
-    def percept(self, current_temperature):
-        return current_temperature
-
-    def act(self, current_temperature):
-        if current_temperature<self.desired_temperature:
-            action = "Turn on heater"
-        elif current_temperature>self.desired_temperature:
-            action = "Turn off heater"
+    def act(self,temp):
+        if temp>self.desired_temp and self.previous_action!="On":
+            action_taken="On"
+            result=(f"Temperature: {temp}, Action: Turn the Heater off....")
+        elif temp<self.desired_temp and self.previous_action!="Off":
+            action_taken="Off"
+            result=(f"Temperature: {temp}, Action: Turn the Heater on....")
         else:
-            action = self.previous_action
-
-        if action != self.previous_action:
-            self.previous_action=action
-        return action
-
-rooms = {
-    "Bedroom1": 22,
-    "Kitchen": 18,
-    "Living Room": 20,
-    "Bedroom2": 24, 
-    "Bathroom": 23
+            action_taken=self.previous_action
+            result=(f"Temperature: {temp}, Action: No action required....")
+        self.previous_action=action_taken
+        return result
+obj3=ModelBasedReflexAgent(int(input("Enter the desired temperature: ")))
+rooms={
+    "Living room": 22,
+    "Dining room": 20,
+    "Bedroom": 16,
+    "Library": 12,
 }
-
-desired_temperature = 20
-agent = SimpleReflexAgent(desired_temperature)
-
-for room, temperature in rooms.items():
-    action = agent.act(temperature)
-    print(f"{room}: Current temperature = {temperature}°C. {action}.")
+for room,temperature in rooms.items():
+    print(f"{room}: {obj3.act(temperature)}.")
