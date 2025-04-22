@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Price Prediction</title>
+</head>
+<body>
+    <h1>Stock Price Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="open">Open Price:</label><br>
+        <input type="number" step="any" name="open" required><br><br>
+
+        <label for="high">High Price:</label><br>
+        <input type="number" step="any" name="high" required><br><br>
+
+        <label for="low">Low Price:</label><br>
+        <input type="number" step="any" name="low" required><br><br>
+
+        <input type="submit" value="Predict Close Price">
+    </form>
+</body>
+</html>
