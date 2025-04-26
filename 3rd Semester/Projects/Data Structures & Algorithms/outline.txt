@@ -1,0 +1,5 @@
+Songs Player
+1. Double linked list for previous and forward
+2. Queue for upcoming Songs
+3. Stack for recent Songs
+4. File handling for mp3 imports
