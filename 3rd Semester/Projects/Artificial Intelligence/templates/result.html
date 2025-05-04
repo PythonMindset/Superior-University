@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .result-box {
+            width: 400px;
+            margin: 80px auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 0 20px #0ff;
+            color: #fff;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .result-box h2 {
+            color: #0ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #0ff;
+        }
+
+        .result-box ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        .result-box li {
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0ff;
+            border: 1px solid #0ff;
+            padding: 8px 14px;
+            border-radius: 6px;
+        }
+
+        a:hover {
+            background-color: #0ff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Predicted Prices (PKR)</h2>
+        <ul>
+            <li><strong>Linear Regression:</strong> PKR {{ "{:,.0f}".format(linear_pred * 100000) }}</li>
+            <li><strong>Random Forest:</strong> PKR {{ "{:,.0f}".format(rf_pred * 100000) }}</li>
+            <li><strong>SVR:</strong> PKR {{ "{:,.0f}".format(svr_pred * 100000) }}</li>
+        </ul>
+        <a href="/">Predict Again</a>
+    </div>
+</body>
+</html>
