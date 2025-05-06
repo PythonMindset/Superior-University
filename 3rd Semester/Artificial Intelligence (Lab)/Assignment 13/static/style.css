@@ -1,70 +1,94 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
     color: #fff;
     margin: 0;
     padding: 0;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 420px;
-    margin: 60px auto;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
+    max-width: 460px;
+    margin: 50px auto;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 0 25px #0ff;
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 150, 0.1));
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
 }
 
 h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #0ff;
-    text-shadow: 0 0 10px #0ff;
+    color: #00ffe0;
+    text-shadow: 0 0 12px #00ffe0;
 }
 
 label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-weight: bold;
-    color: #fff;
+    color: #ffccff;
 }
 
-input, select {
+input{
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #0ff;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #00fff2;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00fff2;
+    border-color: #ff69b4;
 }
 
 input[type="submit"] {
-    background-color: #0ff;
+    background: linear-gradient(135deg, #00e5ff, #ff00cc);
     color: #000;
     font-weight: bold;
     border: none;
     cursor: pointer;
     transition: 0.3s ease;
-    box-shadow: 0 0 10px #0ff;
+    box-shadow: 0 0 10px #00e5ff;
 }
 
 input[type="submit"]:hover {
-    background-color: #00e5ff;
+    background: linear-gradient(135deg, #ff00cc, #00e5ff);
+    color: #000;
+    box-shadow: 0 0 15px #fff;
+    transform: scale(1.05);
 }
+
 select option {
-    background-color: #111;
-    color: white;
+    background-color: #1c1c2b;
+    color: #0ff;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    transition: background 0.3s ease;
 }
+select option:hover,
+select option:focus {
+    background-color: #00e5ff;
+    color: #000;
+}
+
 
 form {
     display: flex;
     flex-direction: column;
 }
-
-input, select {
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -72,12 +96,39 @@ input, select {
     border: 1px solid #0ff;
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
+    font-size: 16px;
     box-sizing: border-box;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+    padding-right: 30px;
+    cursor: pointer;
 }
 
-input[type="number"],
-input[type="text"],
-input[type="submit"],
-select {
-    font-size: 16px;
+select:hover {
+    border-color: #00e5ff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Chrome, Safari, Edge */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #00e5ff;
+    box-shadow: 0 0 10px #0ff;
 }
