@@ -1,0 +1,1 @@
+Please keep in mind that a virtual environment was created and used to run these files as cv2 requires a specific version of certain libraries.
