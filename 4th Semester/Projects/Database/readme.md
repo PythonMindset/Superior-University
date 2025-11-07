@@ -97,8 +97,8 @@ The database includes **comprehensive test data**:
 ## 👤 Author
 
 **Ali Maqsood**  
-🎓 BSAI 4th Semester, Superior University  
-💼 Role: Database Designer & Developer  
+🎓 Student of **BS Artificial Intelligence**, 4th Semester  
+🏫 **Superior University**  
 🔗 [GitHub Repository](https://github.com/PythonMindset/Superior-University/tree/main/4th%20Semester/Projects/Database)
 
 ---
@@ -108,3 +108,4 @@ The database includes **comprehensive test data**:
 </p>
 
 <h3 align="center">💡 “Data is the foundation of intelligence.”</h3>
+
