@@ -7,7 +7,7 @@
 
 ---
 
-## 🎯 Project Overview
+## 🎯 Project Overview ![Badge](https://img.shields.io/badge/Project-Database-blue)
 
 The **AI Model Training Database** manages and analyzes the entire **AI Model Training Lifecycle**, including researchers, datasets, models, parameters, hardware, and performance tracking.
 
@@ -108,4 +108,5 @@ The database includes **comprehensive test data**:
 </p>
 
 <h3 align="center">💡 “Data is the foundation of intelligence.”</h3>
+
 
