@@ -12,7 +12,6 @@ Welcome to my **university projects repository**! This repository contains assig
   - [Web Development](#web-development)
   - [Python & JavaScript](#python--javascript)
 - [Technologies Used](#technologies-used)
-- [How to Use](#how-to-use)
 - [Contact](#contact)
 
 ---
